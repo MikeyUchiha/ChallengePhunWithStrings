@@ -16,7 +16,14 @@ namespace ChallengePhunWithStrings
             // In my case, the result would be:
             // yarG kilaM
 
-            ResultLabel.Text = name;
+            //string temp = "";
+            //for (int i = name.Length - 1; i >= 0; i--)
+            //{
+            //    temp += name[i];
+            //}
+            //name = temp;
+
+            //ResultLabel.Text = name;
         }
     }
 }

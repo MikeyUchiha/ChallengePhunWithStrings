@@ -24,6 +24,21 @@ namespace ChallengePhunWithStrings
             //name = temp;
 
             //ResultLabel.Text = name;
+
+            // 2. Reverse this sequence:
+            string names = "Luke,Leia,Han,Chewbaca";
+            // When you're finished it should look like this:
+            // Chewbacca,Han,Leia,Luke
+            //string[] namearray = names.Split(',');
+            //string temp = "";
+            //for(int i = namearray.Length - 1; i >= 0; i--)
+            //{
+            //    temp += namearray[i] + ",";
+            //}
+            //names = temp.Remove(temp.Length - 1);
+            //ResultLabel.Text = names;
+
+
         }
     }
 }

@@ -57,7 +57,45 @@ namespace ChallengePhunWithStrings
             //names = result;
             //ResultLabel.Text = names;
 
+            // 4. Solve this puzzle:
 
+            string puzzle = "NOW IS ZHEremove-me ZIME FOR ALL GOOD MEN ZO COME ZO ZHE AID OF ZHEIR COUNTRY.";
+            puzzle = DecryptPuzzleString(puzzle);
+            ResultLabel.Text = puzzle;
+        }
+
+        private string DecryptPuzzleString(string puzzle)
+        {
+            puzzle = RemoveText(puzzle);
+            puzzle = ChangeZToT(puzzle);
+            puzzle = ChangeAllToLower(puzzle);
+            puzzle = ConvertFirstLetterToUpper(puzzle);
+            return puzzle;
+        }
+
+        private string RemoveText(string puzzle)
+        {
+            int myIndex = puzzle.IndexOf("remove-me");
+            string result = puzzle.Remove(myIndex, 9);
+            return result;
+        }
+
+        private string ChangeZToT(string puzzle)
+        {
+            string result = puzzle.Replace("Z", "T");
+            return result;
+        }
+
+        private string ChangeAllToLower(string puzzle)
+        {
+            string result = puzzle.ToLower();
+            return result;
+        }
+
+        private string ConvertFirstLetterToUpper(string puzzle)
+        {
+            string result = puzzle[0].ToString().ToUpper() + puzzle.Substring(1);
+            return result;
         }
     }
 }
